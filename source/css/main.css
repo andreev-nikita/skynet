@@ -25,6 +25,8 @@
 
 }
 
+/*Основные стили*/
+
 * {
 	font-family: "Roboto", sans-serif;
 	margin: 0;
@@ -157,11 +159,37 @@ body {
 .options-header__arrow {
 	width: 35px;
 	fill: #82C12B;
+	cursor: pointer;
 }
 
 .tariff__flex-container_options {
 	border-bottom: none;
 }
+
+/*Стили для подтверждения тарифа*/
+ 
+.tariff__packages_selected {
+	margin-top: 20px;
+}
+
+.tariff__package-item_selected {
+	color: #aaa;
+}
+
+.confirm-button {
+	width: 90%;
+	height: 60px;
+	line-height: 60px;
+	color: #fff;
+	background-color: #82C12B;
+	margin: 20px auto;
+	text-align: center;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+
+
 
 @media only screen and (min-width: 1025px) {
 	.tariff:nth-child(3n) {
