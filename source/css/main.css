@@ -36,6 +36,10 @@ body {
 	background-color: #EFEFF4;
 }
 
+.main {
+	width: 100%;
+}
+
 .content {
 	width: 100%;
 	display: flex;
@@ -45,15 +49,12 @@ body {
 
 .tariff {
 	width: 32%;
+	min-width: 240px;
 	margin-right: 2%;
 	background-color: #fff;
 	border: 1px solid #D4D3D8;
 	margin-bottom: 20px;
 	box-sizing: border-box;
-}
-
-.tariff:nth-child(3) {
-	margin-right: 0;
 }
 
 .tariff > * {
@@ -100,6 +101,13 @@ body {
 	width: 25px;
 	fill: #C7C7CC;
 	margin-right: 15px;
+	transition: fill ease 1s;
+}
+
+.tariff__arrow:hover {
+	fill: #4D575D;
+	cursor: pointer;
+	transition: fill ease 1s;
 }
 
 .tariff__cost {
@@ -108,6 +116,85 @@ body {
 }
 
 .tariff__footer {
-	color: #0075D9;
 	padding: 15px 0;
+	margin-right: 10px;
+}
+
+.tariff__link {
+	text-decoration: none;
+	color: #0075D9;
+}
+
+
+/*Стили для страницы опций тарифа*/
+
+.tariff_options {
+	width: 100%;
+}
+
+.content-options {
+	width: 50%;
+	margin: 0 auto;
+	min-width: 240px;
+}
+
+.options-header {
+	display: flex;
+	align-items: center;
+	background-color: #F7F7F8;
+	border: 1px solid #D4D3D8;
+	margin-bottom: 30px;
+}
+
+.options-header__header {
+	color: #000;
+	font-size: 20px;
+	font-weight: 500;
+	padding: 15px 0;
+	margin: auto;
+}
+
+.options-header__arrow {
+	width: 35px;
+	fill: #82C12B;
+}
+
+.tariff__flex-container_options {
+	border-bottom: none;
+}
+
+@media only screen and (min-width: 1025px) {
+	.tariff:nth-child(3n) {
+		margin-right: 0;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.tariff {
+		width: 48%;
+		margin-right: 4%;
+	}
+
+	.tariff_options {
+		width: 100%;
+	}
+
+	.tariff:nth-child(2n) {
+		margin-right: 0;
+	}
+
+	.content-options {
+		width: 70%;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	.tariff {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.content-options {
+		width: 100%;
+	}
 }
